@@ -1,0 +1,17 @@
+<article>
+  <h1 class="Main-heading">My Todo-list</h1>
+  <%= form_with(url: "/todos", method: "post",class: "AddTodo") do%>
+    <%# <input
+      type="text"
+      name="todo_text"
+      class="AddTodo-text"
+      placeholder="What's next?"
+    /> %>
+    <%= text_field_tag 'todo_text',nil,placeholder: "What's next?",:autofocus => "autofocus",class: "AddTodo-text"%>
+    <input type="date" name="due_date" class="AddTodo-date" />
+    <input type="submit" value="Add" class="AddTodo-btn" />
+  <% end %>
+  <%= render partial: "todo-section", locals: {section_title: "Ovverdue",todos: @todos.not_completed.overdue, show_due_date: true}%>
+  <%= render partial: "todo-section", locals: {section_title: "Due Today",todos: @todos.due_today, show_due_date: false} %>
+  <%= render partial: "todo-section", locals: {section_title: "Due Later",todos: @todos.due_later, show_due_date: true} %>
+</article>

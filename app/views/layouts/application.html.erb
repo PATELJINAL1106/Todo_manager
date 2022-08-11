@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo Managment App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+    <% if @current_user %>
+      <div class="user-name flex">
+        Hello, <%= @current_user.first_name %>
+        <%= button_to 'Sign Out', "/signout", method: "delete" ,class: "links" %>
+      </div>
+    <% end %>
+    <% if flash[:error] %>
+      <p class="Flash-msg">
+        <%= flash[:error] %>
+      </p>
+    <% end %>
+    <%# <h3 style="font-size:20px; background-color:black; color:white;">Home about Contect us </h3> %>
+    <%= yield %>
+    <%# <h3 style="font-size:20px; background-color:black; color:white;">This as footer of our site</h3> %>
+  </body>
+</html>

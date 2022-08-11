@@ -1,0 +1,45 @@
+.hello_text {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form {
+    background-color: rgb(236, 238, 240);
+    padding: 30px 60px;
+}
+
+.input-Lable {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.form_input {
+    width: 80%;
+    padding: 8px 15px;
+    font-size: 18px;
+    border-radius: 7px;
+    border: 2px solid black;
+}
+
+.submit_btn {
+    margin-top: 10px;
+    width: 90%;
+    padding: 8px 15px;
+    font-size: 18px;
+    border-radius: 7px;
+    font-size: 20px;
+    color:black;
+    border-radius: 7px;
+    border : 2px solid black;
+    background-color:rgb(160, 152, 152);
+    font-family: "Gill Sans" , "Gill Sans MT","Trebuchet MS",sans-serif;
+}
+
+.forgot_password_link {
+    margin-left: 88px;
+    font-weight: 600;
+    margin-top: 20px;
+}

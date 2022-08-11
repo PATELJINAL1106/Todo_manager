@@ -1,0 +1,17 @@
+<%= form_with url: update_password_path,method: "put",class: "form" do |form| %>
+  <div class="input-box">
+    <p class="input-Lable">First Name : </p>
+    <%= form.text_field :first_name,:autofocus => "autofocus",class: "form_input" %>
+  </div>
+  <div class="input-box">
+    <p class="input-Lable">E-mail : </p>
+    <%= form.email_field :email,class: "form_input"%>
+  </div>
+  <div class="input-box">
+    <p class="input-Lable">New Password : </p>
+    <%= form.password_field :password,class: "form_input"%>
+  </div>
+  <div class="input-box">
+    <%= form.submit "Next",class: "submit_btn"%>
+  </div>
+<% end %>

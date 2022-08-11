@@ -1,0 +1,22 @@
+<h2 class="hello_text">Hello, new User!....</h2>
+<%= form_with url: users_path,class: "form" do |form| %>
+  <div class="input-box">
+    <p class="input-Lable">First Name : </p>
+    <%= form.text_field :first_name,class: "form_input" %>
+  </div>
+  <div class="input-box">
+    <p class="input-Lable">Last Name : </p>
+    <%= form.text_field :last_name,class: "form_input"%>
+  </div>
+  <div class="input-box">
+    <p class="input-Lable">E-mail : </p>
+    <%= form.email_field :email,class: "form_input"%>
+  </div>
+  <div class="input-box">
+    <p class="input-Lable">Password : </p>
+    <%= form.password_field :password,class: "form_input"%>
+  </div>
+  <div class="input-box">
+    <%= form.submit "Sign Up",class: "submit_btn"%>
+  </div>
+<% end %>
